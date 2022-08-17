@@ -1,0 +1,152 @@
+body{
+  background-image: url('./background_3.JPG');
+  position: relative;
+}
+
+.header{
+
+  text-shadow:
+  0 0 5px #fff,
+  0 0 13px rgb(41, 36, 198),
+  0 0 13px rgb(41, 36, 198),
+  0 0 13px rgb(41, 36, 198),
+  0 0 13px rgb(41, 36, 198);
+  font-size: 50px;
+  color: #fff;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  line-height: 400px;
+
+}
+
+
+
+#runLine1 {
+  width: 940px;
+  height: 400PX;
+  margin: 50px auto;
+  position: relative;
+  border: 1px solid #03A9F3;
+}
+
+#runLine1::before,#runLine1::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  transition: .3s ease-in-out;
+}
+
+#runLine1::before {
+  top: -20px;
+  left: -20px;
+  border-top: 1px solid #03A9F3;
+  border-left: 1px solid #03A9F3;
+}
+
+#runLine1::after {
+  right: -20px;
+  bottom: -20px;
+  border-bottom: 1px solid #03A9F3;
+  border-right: 1px solid #03A9F3;
+}
+
+#runLine1:hover::before,
+#runLine1:hover::after {
+  width: calc(100% + 39px);
+  height: calc(100% + 39px);
+}
+
+.allQA{
+  color: #fff;
+  width: 940px;
+  margin: 20px auto;
+  opacity: 100%;
+}
+
+.allQA > div{
+  margin-bottom: 50px;
+}
+
+#QA{
+  background-color: rgb(41, 45, 49);
+  opacity: 70%;
+  padding: 20px;
+}
+
+#QA {
+  width: calc(100% - 10px);
+  float: none;
+  line-height: 30px;
+}
+@media (max-width: 900px) {
+  #QA {
+    width: calc(100% / 3 - 10px);
+  }
+}
+@media (max-width: 600px) {
+  #QA {
+    width: calc(50% - 10px);
+  }
+}
+@media (max-width: 460px) {
+  #QA {
+    width: calc(100% - 10px);
+  }
+}
+
+.answer{
+  text-align: justify;
+  text-justify:inter-ideograph;
+}
+
+.QA1{
+  margin-top: 100PX;
+}
+
+h2{
+  position: relative;
+  display: inline-block;
+}
+
+h2::before{
+  content: "";
+  z-index: -1;
+  position: absolute;
+  height: 10px;
+  width: 100%;
+  background: #2096cd;
+  top:50%;
+  border-radius: 5px;
+}
+
+
+.toTop-arrow{
+  width: 100px;
+  height: 100px;
+  color: #03A9F3;
+  border-radius: 100px;
+  background-color: transparent;
+  border: #03A9F3 4px dotted;
+  margin: 10px 45%;
+}
+
+.toTop-arrow:hover {
+  animation: rotation 2s infinite linear;
+  cursor: pointer;
+}
+
+@keyframes rotation{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+      transform: rotate(360deg);
+  }
+}
+
+.toTop-arrow .word :hover{
+  animation-direction: reverse;
+}
+
+
